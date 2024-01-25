@@ -26,7 +26,7 @@ while max(player_score)<max_score:
         
         current_score=0
         while True:
-            should_roll=input(f"does player: {player} you wanna roll the dice(y/n)")
+            should_roll=input(f"does player: {player+1} wanna roll the dice(y/n)")
             if should_roll.lower()!="y":
                 break
             value=roll()
@@ -41,7 +41,7 @@ while max(player_score)<max_score:
             print(f"the player current score: {current_score}")
         
         player_score[player]+=current_score
-        print(f"score of player {player} is {player_score[player]}")
+        print(f"score of player {player+1} is {player_score[player]}")
 
 max_score=max(player_score)
 winner=player_score.index(max_score)
